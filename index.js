@@ -17,7 +17,7 @@ const args = argv.slice(1);
 function execute() {
 	const menuData = modules.get(menu);
 	if (!menuData) {
-		const helpMap = modules.map(x => `	${x.id} - ${x.help}`).join('\n');
+		const helpMap = Array.from(modules).map(x => `	${x[1].id} - ${x[1].help}`).join('\n');
 		console.log('vulcanjs - help\n' + helpMap + '\nmade by @realmotylek');
 		return;
 	}
