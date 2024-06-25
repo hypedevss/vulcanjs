@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "prompt-sync": "^4.2.0",
     "vulcan-api-js": "^3.5.4"
   },
   "devDependencies": {

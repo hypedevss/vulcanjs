@@ -1,6 +1,5 @@
 // menu handler
 globalThis.fs = require('fs');
-const input = require('prompt-sync')();
 
 const menuModules = globalThis.fs.readdirSync('./modules').filter(file => file.endsWith('.js'));
 const modules = new Map();
