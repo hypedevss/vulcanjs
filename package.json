@@ -1,0 +1,21 @@
+{
+  "name": "vulcanjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/collection": "^2.1.0",
+    "axios": "^1.7.2",
+    "prompt-sync": "^4.2.0",
+    "vulcan-api-js": "^3.5.3"
+  },
+  "devDependencies": {
+    "eslint": "^9.5.0"
+  }
+}
