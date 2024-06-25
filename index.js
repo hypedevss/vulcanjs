@@ -1,10 +1,9 @@
 // menu handler
-const { Collection } = require('@discordjs/collection');
 globalThis.fs = require('fs');
 const input = require('prompt-sync')();
 
 const menuModules = globalThis.fs.readdirSync('./modules').filter(file => file.endsWith('.js'));
-const modules = new Collection();
+const modules = new Map();
 
 for (const file of menuModules) {
 	const files = require(`./modules/${file}`);
@@ -13,7 +12,7 @@ for (const file of menuModules) {
 
 const argv = process.argv.slice(2);
 
-const menu = argv[0]
+const menu = argv[0];
 const args = argv.slice(1);
 
 function execute() {
