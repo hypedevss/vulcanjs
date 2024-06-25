@@ -27,8 +27,8 @@ module.exports = {
 				if (!l.visible) {
 					return;
 				}
-				if (l.change) {
-					const changeDetails = substitutions.find(s => s.id === l.change.id);
+				if (change) {
+					const changeDetails = substitutions.find(s => s.id === change.id);
 					lessonarrays.push(`${l.timeSlot.position}. ${changeDetails.subject.name} | T: ${changeDetails.teacher.displayName} | CHNG`);
 				}
 				else {
