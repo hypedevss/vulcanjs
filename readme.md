@@ -8,13 +8,11 @@ Experimental Vulcan UONET+ client, controllable with the terminal.
 - student selection
 - lucky number
 - lessons timetable (with option to specify the date and working substitutions)
-- grades
 - more soon
 
 # installation
   - clone this repo
   - run `npm i` to install dependencies
-  - run `npm i --dev` to install typescript compiler
   - run `npm run build` to compile the typescript files
   - Congrats!
 
