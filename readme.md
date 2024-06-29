@@ -23,7 +23,7 @@ Experimental Vulcan UONET+ client, controllable with the terminal.
   - Congrats!
   
 # prebuilt 
-i'm not going to distribute prebuilt JS files, but if you want i can start doing this. (Create an issue about that)
+Please build it yourself, making a prebuilt would be problematic due to frequent updates
 
 
 # security
