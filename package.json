@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "clean": "rm -rf addons && rm -rf modules && rm index.js"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +14,8 @@
     "vulcan-api-js": "^3.5.4"
   },
   "devDependencies": {
-    "eslint": "^9.5.0"
+    "@types/node": "^20.14.9",
+    "eslint": "^9.5.0",
+    "typescript": "^5.5.2"
   }
 }

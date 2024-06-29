@@ -4,3 +4,6 @@ node_modules
 auth/keystore.json
 auth/account.json
 auth/student
+index.js
+addons
+modules
