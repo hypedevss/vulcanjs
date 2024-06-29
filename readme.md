@@ -8,6 +8,7 @@ Experimental Vulcan UONET+ client, controllable with the terminal.
 - student selection
 - lucky number
 - lessons timetable (with option to specify the date and working substitutions)
+- grades
 - more soon
 
 # installation
