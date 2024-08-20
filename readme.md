@@ -1,3 +1,8 @@
+# ABANDONED
+
+Vulcan turned off their old Hebe API in favor of Edu Vulcan Mobile App. This is no longer working.
+
+
 # vulcanjs
 Experimental Vulcan UONET+ client, controllable with the terminal.
 

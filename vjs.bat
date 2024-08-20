@@ -1,7 +1,7 @@
 @echo off
 setlocal EnableDelayedExpansion
 
-set "indexPath=%~dp0dist\index.js"
+set "indexPath=%~dp0index.js"
 
 set "arguments=%*"
 
