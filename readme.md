@@ -1,9 +1,6 @@
 # NOTICE
 
-Not every school that uses VULCAN e-register has implemented eduVULCAN and still uses the old app, this will work in these cases.
-The new mobile API has almost no differences, the main differences are the login system has been changed and some features will be paid (in the app, if the api would allow it, idk)
-This project remains abandoned until someone/or me doesn't figure out how to update the library to work with eduVULCAN.
-
+This is an experimental branch where i'm trying to develop a eduVULCAN library.
 
 # vulcanjs
 Experimental Vulcan UONET+ client, controllable with the terminal.
