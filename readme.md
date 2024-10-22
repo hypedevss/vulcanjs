@@ -1,3 +1,8 @@
+# THIS BRANCH IS OBSOLETE
+
+Version of vulcanjs here won't be updated anymore. Please check the [new](https://github.com/hypedevss/vulcanjs/tree/hebece) version that will support eduVULCAN
+
+
 # NOTICE
 
 Not every school that uses VULCAN e-register has implemented eduVULCAN and still uses the old app, this will work in these cases.
