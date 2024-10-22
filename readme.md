@@ -1,24 +1,26 @@
-# NOTICE
 
-This is an experimental branch where i'm trying to develop a eduVULCAN library.
+<img align="center" src="assets/vulcanjs.png">
 
-# vulcanjs
-Experimental Vulcan UONET+ client, controllable with the terminal.
+Experimental eduVULCAN client, controllable with the terminal.
 
-# features
+# Features
 
-- session registering
-- student listing
-- student selection
-- lucky number
-- lessons timetable (with option to specify the date and working substitutions)
-- more soon
+- [ ] Authentication
+- [ ] Student Listing
+- [ ] Student Selection
+- [ ] Lucky Number
+- [ ] Timetable
+- [ ] Grades
+- [ ] Attendance
+- [ ] Messages
+- [ ] Homework
+
 
 # installation
-  - clone this repo
-  - run `npm i` to install dependencies
-  - run `npm run build` to compile the typescript files
-  - Congrats!
+  - ~~clone this repo~~
+  - ~~run `npm i` to install dependencies~~
+  - ~~run `npm run build` to compile the typescript files~~
+  - ~~Congrats!~~
 
 # updating
   So, you should have typescript installed, so let's continue
