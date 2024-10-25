@@ -5,9 +5,9 @@ Experimental eduVULCAN client, controllable with the terminal.
 
 # Features
 
-- [ ] Authentication
+- [x] Authentication
 - [ ] Student Listing
-- [ ] Student Selection
+- [x] Student Selection
 - [ ] Lucky Number
 - [ ] Timetable
 - [ ] Grades

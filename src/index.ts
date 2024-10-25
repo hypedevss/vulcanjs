@@ -1,10 +1,14 @@
 import * as fs from 'fs';
 import * as path from 'path';
-
+import * as im from 'prompt-sync';
+const input = im();
+import * as ce from 'hebece';
+import * as chalk from 'chalk';
+import { AsciiTable3, AlignmentEnum } from 'ascii-table3';
 interface MenuModule {
 	id: string;
 	help: string;
-	run(args: string[]): void;
+	run(): void;
 }
 
 const menuModules: string[] = fs.readdirSync('./modules').filter((file: string) => file.endsWith('.js') || file.endsWith('.ts'));
@@ -14,20 +18,36 @@ for (const file of menuModules) {
 	const module = path.resolve('./modules', file);
 	const files = require(module);
 	modules.set(files.default.id, files.default);
+
 }
 
-const argv = process.argv.slice(2);
+function mainMenu() {
+	const menuAscii = new AsciiTable3(chalk.bold('vulcanjs - by @realmotylek'))
+		.setHeading('num', 'module', 'desc')
+		.setAlign(3, AlignmentEnum.CENTER)
+		.setStyle('unicode-single')
 
-const menu = argv[0];
-const args = argv.slice(1);
-function execute() {
-	const menuData = modules.get(menu);
-	if (!menuData) {
-		const helpMap = Array.from(modules).map(x => `	${x[1].id} - ${x[1].help}`).join('\n');
-		console.log('vulcanjs - help\n' + helpMap + '\nmade by @realmotylek');
-		return;
+	modules.forEach((module) => {
+		const moduleNum = Array.from(modules).map((x) => x[0]).indexOf(module.id) + 1
+		menuAscii.addRow(chalk.bold(moduleNum), module.id, module.help)
+	})
+	menuAscii.addRow(chalk.bold('q'), 'exit', 'exit')
+
+	console.log(menuAscii.toString())
+	const menuinput = input(`num: `)
+	if (menuinput) {
+		if (menuinput == 'q') {
+			process.exit()
+		}
+		const selectedModule = modules.get(Array.from(modules)[menuinput - 1][0])
+		selectedModule.run()
 	}
-	menuData.run(args);
 }
 
-execute();
+mainMenu()
+
+
+export {
+	input,
+	mainMenu
+}
