@@ -21,33 +21,38 @@ for (const file of menuModules) {
 
 }
 
+process.on('SIGINT', () => {
+	console.clear();
+	console.log(`${chalk.red(chalk.bold("Received SIGINT!"))} Exiting.`);
+	process.exit(0);
+});
+
 function mainMenu() {
 	const menuAscii = new AsciiTable3(chalk.bold('vulcanjs - by @realmotylek'))
 		.setHeading('num', 'module', 'desc')
 		.setAlign(3, AlignmentEnum.CENTER)
-		.setStyle('unicode-single')
+		.setStyle('unicode-single');
 
 	modules.forEach((module) => {
-		const moduleNum = Array.from(modules).map((x) => x[0]).indexOf(module.id) + 1
-		menuAscii.addRow(chalk.bold(moduleNum), module.id, module.help)
-	})
-	menuAscii.addRow(chalk.bold('q'), 'exit', 'exit')
+		const moduleNum = Array.from(modules).map((x) => x[0]).indexOf(module.id) + 1;
+		menuAscii.addRow(chalk.bold(moduleNum), module.id, module.help);
+	});
+	menuAscii.addRow(chalk.bold('q'), 'exit', 'exit');
 
-	console.log(menuAscii.toString())
-	const menuinput = input(`num: `)
+	console.log(menuAscii.toString());
+	const menuinput = input(`num: `);
 	if (menuinput) {
 		if (menuinput == 'q') {
-			process.exit()
+			process.exit();
 		}
-		const selectedModule = modules.get(Array.from(modules)[menuinput - 1][0])
-		selectedModule.run()
+		const selectedModule = modules.get(Array.from(modules)[menuinput - 1][0]);
+		selectedModule.run();
 	}
 }
 
-mainMenu()
-
+mainMenu();
 
 export {
 	input,
 	mainMenu
-}
+};

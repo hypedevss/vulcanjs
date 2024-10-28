@@ -4,3 +4,4 @@ node_modules
 auth/keystore.json
 auth/account.json
 auth/student
+captchas
