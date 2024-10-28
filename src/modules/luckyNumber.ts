@@ -5,7 +5,7 @@ import * as chalk from 'chalk';
 import { input, mainMenu } from "..";
 export default {
 	id: "lucky",
-	help: "views todays lucky number",
+	help: "views today lucky number",
 	async run(): Promise<void> {
 		const keypair = await keypairManager();
 		console.clear();

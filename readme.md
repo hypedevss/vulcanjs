@@ -8,8 +8,8 @@ Experimental eduVULCAN client, controllable with the terminal.
 - [x] Authentication
 - [ ] Student Listing
 - [x] Student Selection
-- [ ] Lucky Number
-- [ ] Timetable
+- [x] Lucky Number
+- [x] Timetable
 - [ ] Grades
 - [ ] Attendance
 - [ ] Messages
